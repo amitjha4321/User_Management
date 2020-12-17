@@ -2,6 +2,7 @@ package com.example.usermanagement.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,9 +13,13 @@ import android.widget.TextView;
 
 import com.example.usermanagement.R;
 
+import eu.inmite.android.lib.validations.form.annotations.NotEmpty;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText email, password;
+
+    EditText email;
+    EditText password;
     Button login;
     TextView registerlink;
 
@@ -38,11 +43,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         login.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+
             case R.id.btnLogin:
-                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                //startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                startActivity(intent);
+
             case R.id.registerLink:
                 switchOnRegister();
                 break;

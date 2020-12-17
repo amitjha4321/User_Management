@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
         bottomNavigationView=findViewById(R.id.bottomnav);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        //we are adding this here because we need dashboard fragment by default here on the page as user login...
         loadFragment(new DashboardFragment());
     }
 

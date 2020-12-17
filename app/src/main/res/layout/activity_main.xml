@@ -7,10 +7,11 @@
     tools:context=".Activities.MainActivity">
 
     <TextView
+        android:id="@+id/title_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create New Account"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="80dp"
         android:gravity="center"
         android:textSize="70dp"
         android:fontFamily="cursive"
@@ -20,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_centerInParent="true"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:id="@+id/nameLayout">
@@ -68,18 +70,44 @@
             android:hint="Password"
             android:inputType="textPassword"/>
 
+
     </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <Button-->
+<!--        android:id="@+id/profile_image_choosebtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_below="@+id/passwordLayout"-->
+<!--        android:text="Choose Profile Image"-->
+<!--        android:drawableRight="@drawable/ic_profile_image" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/profile_image_uploadbtn"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_below="@+id/profile_image_choosebtn"-->
+<!--        android:text="Upload Profile Image"-->
+<!--        android:drawableRight="@drawable/ic_profile_image" />-->
+
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:textColor="@color/white"
-        android:background="#3BB5EC"
         android:layout_below="@+id/passwordLayout"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="#3BB5EC"
+        android:text="Register"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/loginLink"
